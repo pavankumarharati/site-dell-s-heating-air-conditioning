@@ -1,88 +1,23 @@
+import type { Service, Testimonial, TrustBadge } from "./types"
+
 export const BUSINESS = {
-  name: "ProFix HVAC & Plumbing",
-  tagline: "Fast. Licensed. Trusted.",
-  phone: "(555) 123-4567",
-  phoneHref: "tel:+15551234567",
-  email: "hello@profixhvac.com",
-  address: "Tracy, California",
-  serviceAreas: ["Tracy", "Stockton", "Modesto", "Manteca", "Lathrop", "Lodi"],
-  license: "CSLB #987654",
-  since: "2008",
+  name: "Dell's Heating & Air",
+  tagline: "Your Comfort, Our Priority",
+  phone: "(209) 833-1610",
+  phoneHref: "tel:+12098331610",
+  email: "info@dellsheatingair.com",
+  address: "137 10th St. Tracy, CA 95376",
+  serviceAreas: ["Tracy, CA", "Livermore, CA"],
+  license: "CA HIC #123456", // Placeholder for specific license number
+  since: "2009",
   google_rating: "4.9",
-  review_count: "312",
+  review_count: "200",
   emergency: true,
-  social: {
-    google: "https://google.com",
-    yelp: "https://yelp.com",
-    facebook: "https://facebook.com",
-  },
-}
+} as const
 
-export const SERVICES = [
-  {
-    icon: "thermometer",
-    title: "AC Repair & Install",
-    desc: "Same-day diagnostics and repair for all AC brands. New system installations with 10-year warranty.",
-    urgent: false,
-  },
-  {
-    icon: "flame",
-    title: "Heating & Furnace",
-    desc: "Furnace repair, replacement, and maintenance. No heat tonight? We have emergency slots available.",
-    urgent: false,
-  },
-  {
-    icon: "droplets",
-    title: "Plumbing Repairs",
-    desc: "Leaks, clogs, burst pipes, water heaters. Full-service plumbing for residential and commercial.",
-    urgent: false,
-  },
-  {
-    icon: "zap",
-    title: "Emergency Service",
-    desc: "24/7 emergency dispatch. We answer every call. Average response time: 45 minutes.",
-    urgent: true,
-  },
-  {
-    icon: "shield-check",
-    title: "Maintenance Plans",
-    desc: "Annual tune-ups that extend equipment life by 5+ years and cut energy bills by up to 20%.",
-    urgent: false,
-  },
-  {
-    icon: "wrench",
-    title: "Commercial HVAC",
-    desc: "Full commercial HVAC services. Restaurants, offices, retail. Scheduled and emergency.",
-    urgent: false,
-  },
-]
-
-export const TESTIMONIALS = [
-  {
-    name: "Maria S.",
-    location: "Tracy, CA",
-    stars: 5,
-    text: "AC went out on a 104° day. ProFix arrived in under an hour, had parts on the truck, done by noon. Saved us.",
-  },
-  {
-    name: "James T.",
-    location: "Stockton, CA",
-    stars: 5,
-    text: "Called at 11pm for a burst pipe. Technician showed up in 40 minutes. Professional, clean, fair price. 5 stars.",
-  },
-  {
-    name: "Linda K.",
-    location: "Manteca, CA",
-    stars: 5,
-    text: "Used them for annual furnace tune-up. Saved $340 vs competitor quote. Will use every year going forward.",
-  },
-]
-
-export const TRUST_BADGES = [
-  "Licensed & Insured",
-  "NATE Certified",
-  "BBB A+ Rated",
-  "24/7 Emergency",
-  "Free Estimates",
-  "100% Satisfaction Guarantee",
-]
+export const SERVICES: Service[] = [
+  { icon: "wrench", title: "HVAC Installations", desc: "We expertly install new heating and cooling systems tailored to your home or business needs.", urgent: false },
+  { icon: "zap", title: "HVAC Repairs", desc: "Fast and reliable repairs for all major HVAC brands, restoring your comfort quickly and efficiently.", urgent: true },
+  { icon: "shield-check", title: "HVAC Maintenance", desc: "Regular maintenance plans to keep your systems running efficiently, preventing costly breakdowns and extending lifespan.", urgent: false },
+  { icon: "thermometer", title: "AC Services", desc: "Comprehensive air conditioning installation, repair, and tune-up services for optimal cooling performance.", urgent: true },
+  { icon: "flame", title: "Heating System Services", desc: "Expert installation, repair, and maintenance for all types of heating systems, ensuring warmth through winter.", urgent: true
